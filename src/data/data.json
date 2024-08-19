@@ -1,0 +1,202 @@
+{
+  
+    "Header": {
+      "title": "Lifeline Addis",
+      "paragraph": "Clinic at your door, Experience professional healthcare services in the comfort of your home with our expert team"
+    },
+  
+    "About": {
+    "paragraph": "Lifeline Addis Home-Based Healthcare is a leading home care provider in Ethiopia, dedicated to delivering high-quality, affordable, and accessible medical services directly to patients' homes. Our mission is to bridge the gap in healthcare accessibility, particularly for those with chronic illnesses like diabetes, hypertension, cancer, dementia, and more, while empowering healthcare professionals and creating job opportunities.",
+    "mission" :["Our mission is to deliver high-quality, affordable, and comprehensive healthcare services in the comfort of your home."],
+    "vision" :["We aspire to be the leading home-based healthcare services provider in Ethiopia. "],
+    "values" :["Professionalism, Compassion, Trustworthiness, Personalized, Senior-Friendly"]
+  },
+  
+  "Gallery": [
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/04-large.jpg",
+      "smallImage": "img/portfolio/04-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/02-large.jpg",
+      "smallImage": "img/portfolio/05-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/03-large.jpg",
+      "smallImage": "img/portfolio/06-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/01-large.jpg",
+      "smallImage": "img/portfolio/01-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/05-large.jpg",
+      "smallImage": "img/portfolio/02-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/06-large.jpg",
+      "smallImage": "img/portfolio/03-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/07-large.jpg",
+      "smallImage": "img/portfolio/07-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/08-large.jpg",
+      "smallImage": "img/portfolio/08-small.jpg"
+    },
+    {
+      "title": "Project Title",
+      "largeImage": "img/portfolio/09-large.jpg",
+      "smallImage": "img/portfolio/11-small.jpg"
+    }  ],
+  "Counter":[],
+  "Services": [
+    {
+      "icon": "fa fa-user-md",
+      "name": "Doctor Visits",
+      "text": "Our experienced doctors will come and treat you in the comfort of your home."
+    },
+    {
+      "icon": "fa fa-ambulance",
+      "name": "Nursing Care",
+      "text": "We offer 12-hour and 24-hour nursing care for medication administration, follow-up, elderly care, wound care, and more."
+    },
+    {
+      "icon": "fa fa-wheelchair",
+      "name": "Physiotherapy",
+      "text": "Receive professional physiotherapy services at your home."
+    },
+    {
+      "icon": "fa fa-heart",
+      "name": "Palliative Care",
+      "text": "Access compassionate palliative care in your home."
+    },
+    {
+      "icon": "fa fa-flask",
+      "name": "Laboratory Services",
+      "text": "Comprehensive medical laboratory services at your doorstep."
+    },
+    {
+      "icon": "fa fa-heartbeat",
+      "name": "Wellness Package",
+      "text": "General checkup and routine laboratory tests for diabetes, hypertension, and other chronic illnesses, including consultation on nutrition, diet, and physical activity."
+    },
+    {
+      "icon": "fa fa-users",
+      "name": "Family Package",
+      "text": "Regular and customized wellness checkups for your family."
+    },
+    {
+      "icon": "fa fa-medkit",
+      "name": "Medical Equipment Rental",
+      "text": "Rent all the medical equipment you need from us."
+    }
+
+  ],
+  "CompanyLogos": [
+    {
+      "image": "img/partner/inova.png",
+      "link": "#partners"
+    },
+    {
+      "image": "img/partner/Enat_Bank.png",
+      "link": "#partners"
+    },
+    {
+      "image": "img/partner/Gebeya.jpeg",
+      "link": "#partners"
+    },
+    {
+      "image": "img/partner/shega_magazin.png",
+      "link": "https://shega.co/post/ethiopian-startup-lifeline-addis-integrates-home-health-care-services-into-the-gig-economy/",
+      "text": "Read article",
+      "heartbeat": true
+    },
+    {
+      "image": "img/partner/yeneHealth.jpg",
+      "link": "#partners"
+    },
+    {
+      "image": "img/partner/mastercardfoundation .jpg",
+      "link": "#partners"
+    },
+    {
+      "image": "img/partner/Radison_blu.jpeg",
+      "link": "#partners"
+    },
+    {
+      "image": "img/partner/donkytube.jpeg",
+      "link": "https://www.youtube.com/watch?v=WfY1AJFYdXs&si=MLmeGbC1utt_wy48",
+      "text": "Watch video",
+      "heartbeat": true
+    }
+  ],
+  "Testimonials": [
+    {
+      "img": "img/testimonials/female.jpg",
+      "text": "\"I was diagnosed with a brain tumor. Three months back my doctors at a private hospital told me I needed urgent surgery and I would lose a lot of my functions. The surgery was successful, but after that I lost the ability to walk and move my hand. This was very frustrating. With the addition of chemotherapy I was practically bedridden, then I heard the service of Lifeline Home Based Healthcare. I called them and started to receive home care. Then through constant and caring support from physicians, nurses and physiotherapists of Lifeline's team, I started to regain some of my function. I'm very thankful for their services that helped me improve my quality of life. I recommend them to patients with conditions like me.\"",
+      "name": "Mrs. Aselefech Lema"
+    },
+    {
+      "img": "img/testimonials/male.jpg",
+      "text": "\"My uncle had a stroke and he was being treated at a private hospital. He had a good recovery and the doctors told us that he can now be discharged. But we couldn't accept it as it was totally unimaginable for us to take care of him at home with a feeding tube in his mouth, a urinary catheter and complete left side paralysis. Besides, we have to take him back to the hospital every week for physiotherapy. It was at this time that we heard about the service Lifeline Home Based Healthcare provides. Having them changed everything. The doctors visited him once per week at home adjusting his medications, changing his feeding tube and catheter on time and the physiotherapist will visit him three times per week. My uncle is now well and can walk with little support. He owes it to the Lifeline team that he now can eat his favorite food kitfo.\"",
+      "name": "Mr. Daniel Abera"
+    }
+  ],
+ "Team": [
+  {
+    "img": "img/team/Sol.jpg",
+    "name": "Dr. Solomon Desalegne",
+    "job": "CEO/Founder",
+    "hoverText": "Solomon Desalegn received his medical degree from St. Paul's hospital Millennium Medical College in 2017. He served as General Secretary of EMSA-St. Paul's (Ethiopian Medical Students Association) for two years, with significant contribution to the establishment and strengthening of the association in the college. He also successfully completed his responsibility as President of the Graduation Committee of his class by raising half a million ETB and hosted several events. As Project Coordinator, Dr. Solomon has led many initiatives, most notably the Cervical and Breast Cancer screenings, which served over 4000 women. Dr. Solomon, along with two colleagues, started Lifeline Medical Services to be the bridge between the healthcare recipient and healthcare provider. "
+  },
+  {
+    "img": "img/team/Yonas.jpg",
+    "name": "Dr. Yonas Kifle",
+    "job": "Co Founder",
+    "hoverText": "Yonas Kifle is a young physician currently working in Addis Ababa, the capital city of Ethiopia. He graduated from St. Paul’s Hospital Millennium Medical College in 2017 and joined Areriti primary hospital located in northern Shewa, Amhara region. He served as a quality officer and emergency medicine coordinator for 2 years. During his stay, he developed the emergency disaster response plan for the region and also headed the development of several quality improvement projects and fundraising at the hospital. Dr. Yonas, together with 2 other colleagues, founded Lifeline Medical services, which aspires to bridge the gap between the health care provider and the health recipient. He currently heads the company as CEO and is participating in delivering quality medical service to clients's home. He dreams to build the first palliative care center in his city in the near future. He also participates in voluntary service as a proud rotary."
+  },
+  {
+    "img": "img/team/blen.jpg",
+    "name": "Dr. Blen Fekade",
+    "job": "Project Manager",
+    "hoverText": "Dr. Blen Fekade completed her medical education at Debre Tabor University and is an  Academy for Women Entrepreneurs (AWE) program trainee, enhancing her business acumen through the program. With a month-long internship and two years of dedicated service at Lifeline Addis Home-Based Healthcare, she has held roles as a General Practitioner, Quality assurance Officer, and Project Manager. Currently, her roles include setting project goals, developing detailed plans, managing budgets, coordinating with cross-functional teams, and monitoring key performance indicators (KPIs). Passionate about digital health, Dr. Blen aims to enhance healthcare education and access through innovative digital solutions, especially for underserved populations. She is also deeply committed to improving women’s and children’s health, striving to make a significant impact in these critical areas."
+  },
+  {
+    "img": "img/team/Natnael.jpg",
+    "name": "Dr. Natnael",
+    "job": "business Development manager and partnership lead",
+    "hoverText": "Business Development manager and partnership lead A physician currently practicing in Addis Ababa, Ethiopia. He graduated from Gondar University in 2022. Dr. Kebede serves as the Business Development and Partnership Lead at Lifeline Medical Services. In this role, he is pivotal in forging strategic partnerships and driving business growth. His efforts contribute to the organization’s mission of reaching 100,000 households and creating job opportunities for over 1,000 healthcare professionals."
+  },
+  {
+    "img": "img/team/Seife.jpg",
+    "name": "Dr. Seife Deyu",
+    "job": "Operational Manager",
+    "hoverText": "Graduated from Gondar University and currently serves as an Operational Manager at Lifeline Addis. In this role, he is responsible for overseeing daily operations, ensuring the smooth delivery of healthcare services, and implementing strategic initiatives to enhance the efficiency and effectiveness of the organization."
+  },
+  {
+    "img": "img/team/Michael.jpg",
+    "name": "Dr. Michael",
+    "job": "Quality Assurance manager",
+    "hoverText": "Dr. Micheal graduated from Addis Ababa University College of Health Sciences in 2023, following a comprehensive internship year at Blacklion and Ghandi Memorial Hospitals. With a strong commitment to community health, Dr. Michael has been actively involved in various voluntary screening programs and has furthered their expertise with project management training from the AAU School of Commerce. Currently serving as a General Practitioner and quality manager, Dr. Michael is dedicated to enhancing care across adult, maternal, and child health. His passion for improving patient outcomes and commitment to ongoing professional development are central to their approach in delivering high-quality healthcare."
+  }
+],
+  "Contact": {
+    "address": "Bole behind Denbel, in front of Gazebo Square, in Gazebo building 6th floor.",
+    "phone": "+251 902 30 00 00",
+    "email": "lifelineaddis@gmail.com",
+    "facebook": "https://www.facebook.com/lifelineaddis",
+    "telegram": "telegram.com",
+    "ticktock": "youtube.com",
+    "intagram": "youtube.com"
+  }
+}

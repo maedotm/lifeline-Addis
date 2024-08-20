@@ -22,7 +22,7 @@ export const Header = (props) => {
       heading: "Bringing Healthcare Home",
       content: "Bridging the healthcare gap. Healing begins at home.",
       image: "./img/slide_3.jpg",
-      position: { top: "50%", left: "30%" },
+      position: { top: "50%", left: "35%" },
     },
   ];
 

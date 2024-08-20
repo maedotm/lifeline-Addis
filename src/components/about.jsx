@@ -72,7 +72,7 @@ export const About = (props) => {
           </div>
           <div className="col-12 col-md-6">
             <div className="card animate-rotate" ref={imageRef}>
-              <img src="img/landing_page.jpg" className="card-img-top" alt="" style={{ width: '100%', height: 'auto' }} />
+              <img src="img/08-small.jpg" className="card-img-top" alt="" style={{ width: '100%', height: 'auto' }} />
               <div className="card-body">
                 {/* Optional content can go here */}
               </div>

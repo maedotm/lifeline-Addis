@@ -86,7 +86,7 @@ hr {
 }
 /* Navigation */
 #menu {
-  padding: 15px;
+  padding: 10px;
   transition: all 0.8s;
 }
 #menu.navbar-default {
@@ -138,11 +138,12 @@ hr {
   left: 0 !important;
   bottom: -1px !important;
   width: 100% !important;
-  height: 2px !important;
+  height: 1px !important;
   background: linear-gradient(to right, #a31b1b 0%, #5f1010 100%) !important;
   content: "" !important;
   transition: width 0.2s !important;
 }
+
 .navbar-toggle {
   border-radius: 0;
 }
@@ -255,17 +256,6 @@ header .intro-text {
   padding-top: 350px;
   padding-bottom: 200px;
   text-align: center;
-}
-.first-slide {
-  background-image: url('../img/about1.jpg');
-}
-
-.second-slide {
-  background-image: url('../img/about.jpg');
-}
-
-.third-slide {
-  background-image: url('../img/about.jpg');
 }
 
 .slide-buttons {

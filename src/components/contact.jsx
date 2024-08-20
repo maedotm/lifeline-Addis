@@ -69,7 +69,7 @@ export const Contact = (props) => {
         <div className="container text-center">
           <p>
             &copy; 2024 Lifeline addis. Design by{" "}
-            <a href="ww" rel="">
+            <a href="https://github.com/maedotm" rel="">
               Maedot
             </a>
           </p>

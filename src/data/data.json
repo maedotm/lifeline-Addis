@@ -190,13 +190,26 @@
     "hoverText": "Dr. Micheal graduated from Addis Ababa University College of Health Sciences in 2023, following a comprehensive internship year at Blacklion and Ghandi Memorial Hospitals. With a strong commitment to community health, Dr. Michael has been actively involved in various voluntary screening programs and has furthered their expertise with project management training from the AAU School of Commerce. Currently serving as a General Practitioner and quality manager, Dr. Michael is dedicated to enhancing care across adult, maternal, and child health. His passion for improving patient outcomes and commitment to ongoing professional development are central to their approach in delivering high-quality healthcare."
   }
 ],
+"Blog": [
+  {
+      "image": "img/partner/donkytube.jpeg",
+      "title": "Blog Title 1",
+      "description": "Description for blog 1"
+  },
+  {
+      "image": "path/to/image2.jpg",
+      "title": "Blog Title 2",
+      "description": "Description for blog 2"
+  }
+],
   "Contact": {
     "address": "Bole behind Denbel, in front of Gazebo Square, in Gazebo building 6th floor.",
     "phone": "+251 902 30 00 00",
     "email": "lifelineaddis@gmail.com",
     "facebook": "https://www.facebook.com/lifelineaddis",
-    "telegram": "telegram.com",
-    "ticktock": "youtube.com",
-    "intagram": "youtube.com"
+    "telegram": "https://t.me/lifelinehomebasedhealthcare",
+    "tiktok": "https://www.tiktok.com/@lifelineaddis?_t=8nqYusHlN7W&_r=1",
+    "instagram": "https://www.instagram.com/lifelineaddis_homecare/?next=%2F",
+    "youtube": "https://youtube.com/watch?v=WfY1AJFYdXs&si=MLmeGbC1utt_wy48"
   }
 }

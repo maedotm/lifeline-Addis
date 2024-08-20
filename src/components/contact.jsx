@@ -7,86 +7,60 @@ export const Contact = (props) => {
 
   return (
     <div>
-      <div id="contact">
+      <div id="contact" className="text-center">
         <div className="container">
           <div className="row">
-            <div className="col-md-3 col-md-offset-5 text-c" >
-              <div className="section-title text-center">
+            <div className="col-md-12">
+              <div className="section-title">
                 <h2>Contact Info</h2>
                 <p>Learn More About Our Services.</p>
               </div>
             </div>
           </div>
           <div className="row">
-            <div className="col-md-12 contact-info text-center">
-              <div className="row">
-                <div className="col-md-4 social">
-                  <div className="row">
-                    <div className="col-md-4">
-                      <a href={props.data ? props.data.facebook : "/"}>
-                        <i className="fa fa-facebook"></i>
-                      </a>
-                    </div>
-                    <div className="col-md-4">
-                      <a href={props.data ? props.data.twitter : "/"}>
-                        <i className="fa fa-twitter"></i>
-                      </a>
-                    </div>
-                    <div className="col-md-4">
-                      <a href={props.data ? props.data.youtube : "/"}>
-                        <i className="fa fa-youtube"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4">
-                  <p>
-                    <span>
-                      <i className="fa fa-map-marker"></i> Address
-                    </span>
-                    {props.data ? props.data.address : "loading"}
-                  </p>
-                </div>
-                <div className="col-md-4 social">
-                  <div className="row">
-                    <div className="col-md-4">
-                      <a href={props.data ? props.data.instagram : "/"}>
-                        <i className="fa fa-instagram"></i>
-                      </a>
-                    </div>
-                    <div className="col-md-4">
-                      <a href={props.data ? props.data.linkedin : "/"}>
-                        <i className="fa fa-linkedinz"></i>
-                      </a>
-                    </div>
-                    <div className="col-md-4">
-                      <a href={`tel:${props.data ? props.data.phone : ""}`} onClick={handlePhoneClick}>
-                        <i className="fa fa-phone"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>
+            <div className="col-md-12 contact-info">
+              {/* Address Information Column */}
+              <div className="text-center">
+                <h4>Address Information</h4>
+                <p>
+                  <span><i className="fa fa-map-marker"></i> Address: </span>
+                  {props.data ? props.data.address : "loading"}
+                </p>
+                <p>
+                  <span><i className="fa fa-phone"></i> Phone: </span>
+                  {props.data ? props.data.phone : "loading"}
+                </p>
+                <p>
+                  <span><i className="fa fa-envelope-o"></i> Email: </span>
+                  {props.data ? props.data.email : "loading"}
+                </p>
               </div>
-              <div className="row">
-                <div className="col-md-12 contact-item">
-                  <p>
-                    <span>
-                      <i className="fa fa-phone"></i> Phone
-                    </span>{" "}
-                    {props.data ? props.data.phone : "loading"}
-                  </p>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-md-12 contact-item">
-                  <p>
-                    <span>
-                      <i className="fa fa-envelope-o"></i> Email
-                    </span>{" "}
-                    {props.data ? props.data.email : "loading"}
-                  </p>
-                </div>
-              </div>
+            </div>
+          </div>
+          {/* Social Links Column at the bottom */}
+          <div className="row">
+  <div className="col-md-12">
+    <h4>Social Links</h4>
+    <div className="social">
+      <a href={props.data ? props.data.facebook : "/"} target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-facebook"></i>
+      </a>
+      <a href={props.data ? props.data.telegram : "/"} target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-telegram"></i>
+      </a>
+      <a href={props.data ? props.data.youtube : "/"} target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-youtube"></i>
+      </a>
+      <a href={props.data ? props.data.instagram : "/"} target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-instagram"></i>
+      </a>
+      <a href={props.data ? props.data.tiktok : "/"} target="_blank" rel="noopener noreferrer">
+        <i className="fab fa-tiktok"></i>
+      </a>
+      <a href={`tel:${props.data ? props.data.phone : ""}`} onClick={handlePhoneClick}>
+        <i className="fa fa-phone"></i>
+      </a>
+    </div>
             </div>
           </div>
         </div>
@@ -94,7 +68,7 @@ export const Contact = (props) => {
       <div id="footer">
         <div className="container text-center">
           <p>
-            &copy; 2024 Life line addis. Design by{" "}
+            &copy; 2024 Lifeline addis. Design by{" "}
             <a href="ww" rel="">
               Maedot
             </a>

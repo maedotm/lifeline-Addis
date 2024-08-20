@@ -98,7 +98,7 @@ function Counter({ className, text, ...rest }) {
 
       <CounterRow>
         {[
-          { count: 500, text: "A team of Healthcare\nProfessional" },
+          { count: 500, text: "Health care Professional" },
           { count: 5, text: "year experience" },
           { count: 10000, text: "Served families" },
         ].map(({ count, text }, index) => (

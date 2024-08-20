@@ -15,6 +15,13 @@ export const Services = (props) => {
     setHoveredIndex(null);
   };
 
+  const handleClick = (index) => {
+    setHoveredIndex(index);
+    setTimeout(() => {
+      setHoveredIndex(null);
+    }, 1000); // Reset after 1 second
+  };
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -78,17 +85,13 @@ export const Services = (props) => {
         <div className="row">
           {props.data
             ? props.data.map((d, i) => (
-                <div
-                  key={`${d.name}-${i}`}
-                  className="col-md-3 col-sm-6"
-                  onMouseEnter={() => handleMouseEnter(i)}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <div className={`service-item ${hoveredIndex === i ? 'flipped' : ''}`}>
+                <div key={`${d.name}-${i}`} className="col-md-3 col-sm-6" onMouseEnter={() => handleMouseEnter(i)} onMouseLeave={handleMouseLeave}>
+                  <div
+                    className={`service-item ${hoveredIndex === i ? 'flipped' : ''}`}
+                    onClick={() => handleClick(i)}
+                  >
                     <div className="service-item-front">
-                      <i
-                        className={`rounded-icon ${d.icon} ${visibleIndices.includes(i) ? 'animate__animated animate__slideInDown' : ''}`}
-                      ></i>
+                      <i className={`rounded-icon ${d.icon} ${visibleIndices.includes(i) ? 'animate__animated animate__slideInDown' : ''}`}></i>
                       <p>{d.name}</p>
                     </div>
                     <div className="service-item-back">

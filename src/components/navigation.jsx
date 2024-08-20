@@ -58,9 +58,8 @@ export const Navigation = (props) => {
               </a>
             </li>
             <li>
-              <a href="he" className="page-scroll">
-                blog
-              </a>
+            <a href="blog.jsx" target="_blank" rel="noopener noreferrer">  blog</a>
+              
             </li>
           </ul>
         </div>

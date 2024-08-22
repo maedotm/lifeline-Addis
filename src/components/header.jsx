@@ -10,19 +10,16 @@ export const Header = (props) => {
       heading: props.data ? props.data.title : "First Heading",
       content: props.data ? props.data.paragraph : "Loading",
       image: "./img/Lslide_1.jpg",
-      position: { top: "70%", left: "50%" },
     },
     {
       heading: "Your Home Healthcare Partner",
       content: "Your health, our priority. Expert care, home comfort.",
       image: "./img/Lslide_2.jpg",
-      position: { top: "60%", left: "50%" },
     },
     {
       heading: "Bringing Healthcare Home",
       content: "Bridging the healthcare gap. Healing begins at home.",
       image: "./img/Lslide_3.jpg",
-      position: { top: "50%", left: "35%" },
     },
   ];
 
@@ -66,7 +63,7 @@ export const Header = (props) => {
         >
           <div
             className={`slide-content ${isAnimating ? "fade" : ""}`}
-            style={{ top: slide.position.top, left: slide.position.left }}
+            style={{ top: "50%", left: "50%" }}
           >
             <h2>{slide.heading}</h2>
             <p>{slide.content}</p>

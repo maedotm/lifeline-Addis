@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Navigation } from "./components/navigation";
 import { Header } from "./components/header";
-
 import { About } from "./components/about";
 import { Services } from "./components/services";
 import Counter from "./components/counter";
@@ -9,6 +8,7 @@ import Partner from "./components/partner";
 import { Testimonials } from "./components/testimonials";
 import { Team } from "./components/Team";
 import { Contact } from "./components/contact";
+import SocialLinks from "./components/socialLinks"; 
 
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
@@ -36,6 +36,7 @@ const App = () => {
       <Testimonials data={landingPageData.Testimonials} />
       <Team data={landingPageData.Team} />
       <Contact data={landingPageData.Contact} />
+      <SocialLinks /> {/* Add SocialLinks component */}
     </div>
   );
 };

@@ -219,7 +219,7 @@ a:focus,
   outline-offset: none;
 }
 /* Header Section */
-.intro {
+/* .intro {
   display: table;
   width: 100%;
   padding: 0;
@@ -229,6 +229,9 @@ a:focus,
   -moz-background-size: cover;
   background-size:cover;
   -o-background-size: cover;
+} */
+.container {
+  overflow: hidden; /* Hide any overflowing content */
 }
 .intro h1 {
   font-family: "Raleway", sans-serif;
@@ -286,7 +289,6 @@ header .intro-text {
   background-position: center;
   padding: 4rem;
   opacity: 0.8;
-  display: none;
 }
 
 .first-slide.active,
@@ -406,17 +408,24 @@ button.next {
 .header-container {
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  height: 100vh; /* Full viewport height */
 }
+@media (max-width: 768px) {
+  .slide-content h2 {
+    font-size: 100rem; /* Smaller font size on mobile */
+  }
 
+  .slide-content p {
+    font-size: 4rem; /* Smaller font size on mobile */
+  }
+}
 .slide {
-  display: none;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
+  background-size: cover; /* Ensure the background image scales */
   background-position: center;
 }
 
@@ -460,7 +469,13 @@ button.next {
     font-size: 1rem; /* Adjust button size */
   }
 }
-
+@media (max-width: 768px) {
+  .slide {
+    width: 100vw; /* Full viewport width */
+    height: auto; /* Allow height to adjust for content */
+    min-height: 60vh; /* Minimum height for better visibility */
+  }
+}
 
 /* About Section */
 #about {
@@ -759,7 +774,7 @@ button.next {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .grid-container {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 5rem;
@@ -1482,4 +1497,100 @@ h4 {
 
 .section-title h2 {
   margin-bottom: 20px;
+}
+
+/* social links */
+.social-links {
+  position: fixed;
+  bottom: 100px; /* Adjust positioning */
+  right: 100px; /* Adjust positioning */
+  z-index: 1000; /* Ensure it overlaps other elements */
+  transition: transform 0.3s ease; /* Smooth transition for the links */
+}
+
+.social-icon {
+  position: fixed; /* Fixed position */
+  top: 80%; /* Position from the bottom */
+  right: 5%; /* Position from the right */
+  background-color: #ffffff; 
+  border:#000;
+  border-radius: 50%; 
+  width: 70px; 
+  height: 70px; 
+  cursor: pointer;
+  
+  transition: transform 0.3s; /* Smooth transition for rotation */
+}
+
+.social-icon.active {
+  transform: rotate(360deg); /* Rotate 180 degrees when active */
+}
+
+.heartbeat-icon {
+  width: 40px; 
+  height: 40px; 
+}
+
+.links {
+  margin-top: 10px; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.link-item {
+  color: rgb(18, 32, 223); /* Change to the color of your icons */
+  font-size: 24px; /* Increase the font size */
+  padding: 10px; /* Add padding around the icons */
+  transition: transform 0.3s; /* Smooth transition for scaling */
+}
+
+.link-item:hover {
+  transform: scale(1.2); /* Scale up the icon size on hover */
+}
+
+/* Additional styling if necessary */
+.links {
+  margin-top: 10px; 
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+}
+
+
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); 
+  }
+}
+.social-icon {
+  animation: heartbeat 1s infinite; /* Start heartbeat animation while not clicked */
+}
+
+
+.link-item:hover {
+  transform: scale(1.1); /* Slightly scale on hover */
+}
+
+.links .link-item {
+  opacity: 1; /* Make links visible when opened */
+  transform: translateY(0); /* Reset the transform */
+}
+.links .link-item {
+  animation: fadeIn 0.9s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

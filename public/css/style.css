@@ -378,7 +378,7 @@ header .intro-text {
 background-color: #fff;
 }
 
-/* button {
+.header-container button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -387,7 +387,7 @@ background-color: #fff;
   color: white;
   font-size: 2rem;
   cursor: pointer;
-} */
+}
 
 button.prev {
   left: 20px;

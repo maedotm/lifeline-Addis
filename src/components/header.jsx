@@ -93,7 +93,7 @@ export const Header = (props) => {
         <FaChevronRight />
       </button>
       <a href="#about" className="btn btn-custom">
-        Learn More
+        learn aboutus
       </a>
     </header>
   );

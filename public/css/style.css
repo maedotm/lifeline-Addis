@@ -251,7 +251,7 @@ a:focus,
   font-size: 22px;
   font-weight: 300px;
   line-height: 30px;
-  background-color: #000;
+  background-color: #991e1e;
   margin: 0 auto;
   margin-bottom: 60px;
 }
@@ -1620,4 +1620,81 @@ h4 {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.social-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #f44336;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.social-icon.active {
+  transform: scale(1.2);
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.heartbeat-icon {
+  width: 24px;
+  height: 24px;
+  fill: #fff;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(-10px);
+}
+
+.links.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.link-item {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #751515;
+  border-radius: 50%;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 8px;
+  transition: all 0.3s ease;
+  
+}
+
+.link-item:hover {
+  transform: scale(1.2);
 }

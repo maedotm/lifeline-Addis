@@ -96,7 +96,7 @@ export const Services = (props) => {
                     </div>
                     <div className="service-item-back">
                       <div className="service-desc">
-                        <p>{d.text.split(' ').slice(0, 5).join(' ')}</p>
+                        <p>{d.text}</p> {/* Display the full text here */}
                       </div>
                     </div>
                   </div>

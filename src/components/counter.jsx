@@ -13,6 +13,7 @@ const CounterSection = styled.section`
   }
 `;
 
+
 const VisionSection = styled.section`
   padding: 2rem;
   background-color: #fff;

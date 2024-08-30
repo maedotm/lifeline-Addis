@@ -6,10 +6,7 @@ const CompanyLogos = () => {
       image: 'img/partner/inova.png',
       link: '#partner',
     },
-    {
-      image: 'img/partner/Enat_Bank.png',
-      link: '#partner',
-    },
+  
     {
       image: 'img/partner/Gebeya.jpeg',
       link: '#partner',

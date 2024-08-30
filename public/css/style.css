@@ -1567,7 +1567,7 @@ h4 {
 
 .link-item {
   color: rgb(18, 32, 223); /* Change to the color of your icons */
-  font-size: 24px; /* Increase the font size */
+  font-size: 25px; /* Increase the font size */
   padding: 10px; /* Add padding around the icons */
   transition: transform 0.3s; /* Smooth transition for scaling */
 }

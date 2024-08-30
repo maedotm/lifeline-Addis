@@ -3,6 +3,9 @@ import CountUp from "react-countup";
 import styled from "styled-components";
 
 const CounterSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  text-align: center; /* Center title and content */
   padding: 2rem;
 
   @media (max-width: 768px) {
@@ -12,7 +15,7 @@ const CounterSection = styled.section`
 
 const VisionSection = styled.section`
   padding: 2rem;
-  background-color: #e1e1e1;
+  background-color: #fff;
   text-align: center;
 
   @media (max-width: 768px) {
@@ -22,7 +25,6 @@ const VisionSection = styled.section`
 
 const Title = styled.div`
   margin-bottom: 2rem;
-  text-align: center; /* Centering the title */
 `;
 
 const Heading = styled.h1`
@@ -38,7 +40,7 @@ const CounterRow = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  font-size:1.8rem;
+  font-size: 1.8rem;
 `;
 
 const CounterColumn = styled.div`
@@ -51,11 +53,11 @@ const CounterColumn = styled.div`
 `;
 
 const NumberWrapper = styled.div`
-  font-size: 2rem; /* Adjusted size for numbers */
+  font-size: 2rem;
   font-weight: bold;
 
   @media (max-width: 768px) {
-    font-size: 1.5rem; /* Smaller size for mobile */
+    font-size: 1.5rem;
   }
 `;
 
@@ -67,7 +69,13 @@ const Text = styled.span`
   }
 `;
 
-function Counter({ className, text, ...rest }) {
+const VisionContent = styled.div`
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  align-items: center; /* Center align items */
+`;
+
+function Counter({ className, ...rest }) {
   const [viewPortEntered, setViewPortEntered] = useState(false);
   const counterColumnsRef = useRef([]);
   const observerRef = useRef(null);
@@ -110,10 +118,11 @@ function Counter({ className, text, ...rest }) {
         <CounterRow>
           {[
             { count: 500000, text: "To Serve" },
-            { count: 10000, text: "Create Jobs" },
-          ].map(({ count, text }, index) => (
+            { count: 10000, text: "To Create Jobs" },
+          ].map(({ text, count }, index) => (
             <CounterColumn key={index} className="counter-column">
-              <div className="counter-content">
+              <VisionContent>
+                <Text>{text}</Text>
                 <NumberWrapper>
                   <strong data-number={count}>
                     <CountUp
@@ -129,8 +138,7 @@ function Counter({ className, text, ...rest }) {
                     </CountUp>
                   </strong>
                 </NumberWrapper>
-                <Text>{text}</Text>
-              </div>
+              </VisionContent>
             </CounterColumn>
           ))}
         </CounterRow>

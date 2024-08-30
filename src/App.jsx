@@ -9,6 +9,7 @@ import { Testimonials } from "./components/testimonials";
 import { Team } from "./components/Team";
 import { Contact } from "./components/contact";
 import SocialLinks from "./components/socialLinks"; 
+import Blog from "./components/blog"; // Import Blog
 
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
@@ -36,7 +37,8 @@ const App = () => {
       <Testimonials data={landingPageData.Testimonials} />
       <Team data={landingPageData.Team} />
       <Contact data={landingPageData.Contact} />
-      <SocialLinks /> {/* Add SocialLinks component */}
+      <SocialLinks />
+      <Blog data={landingPageData.Blog} /> {/* Add the Blog component */}
     </div>
   );
 };

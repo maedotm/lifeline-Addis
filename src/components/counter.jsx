@@ -5,14 +5,13 @@ import styled from "styled-components";
 const CounterSection = styled.section`
   display: flex;
   flex-direction: column;
-  text-align: center; /* Center title and content */
+  text-align: center;
   padding: 2rem;
 
   @media (max-width: 768px) {
     padding: 1rem;
   }
 `;
-
 
 const VisionSection = styled.section`
   padding: 2rem;
@@ -72,12 +71,13 @@ const Text = styled.span`
 
 const VisionContent = styled.div`
   display: flex;
-  flex-direction: column; /* Stack vertically */
-  align-items: center; /* Center align items */
+  flex-direction: column;
+  align-items: center;
 `;
 
 function Counter({ className, ...rest }) {
   const [viewPortEntered, setViewPortEntered] = useState(false);
+  const [hasCounted, setHasCounted] = useState(false);
   const counterColumnsRef = useRef([]);
   const observerRef = useRef(null);
 
@@ -85,9 +85,10 @@ function Counter({ className, ...rest }) {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          const index = entry.target.dataset.index;
-          counterColumnsRef.current[index] = entry.isIntersecting;
-          setViewPortEntered(counterColumnsRef.current.every((visible) => visible));
+          if (entry.isIntersecting && !hasCounted) {
+            setViewPortEntered(true);
+            setHasCounted(true); // Set hasCounted to true to prevent future counts
+          }
         });
       },
       {
@@ -108,7 +109,7 @@ function Counter({ className, ...rest }) {
     return () => {
       observerRef.current.disconnect();
     };
-  }, []);
+  }, [hasCounted]);
 
   return (
     <>
@@ -128,8 +129,8 @@ function Counter({ className, ...rest }) {
                   <strong data-number={count}>
                     <CountUp
                       {...rest}
-                      start={viewPortEntered ? null : 0}
-                      end={count}
+                      start={viewPortEntered ? 0 : 0}
+                      end={viewPortEntered ? count : 0}
                       duration={2.5}
                       prefix="+"
                     >
@@ -162,8 +163,8 @@ function Counter({ className, ...rest }) {
                   <strong data-number={count}>
                     <CountUp
                       {...rest}
-                      start={viewPortEntered ? null : 0}
-                      end={count}
+                      start={viewPortEntered ? 0 : 0}
+                      end={viewPortEntered ? count : 0}
                       duration={2.5}
                       prefix="+"
                     >

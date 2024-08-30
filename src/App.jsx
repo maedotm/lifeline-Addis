@@ -38,7 +38,7 @@ const App = () => {
       <Team data={landingPageData.Team} />
       <Contact data={landingPageData.Contact} />
       <SocialLinks />
-      <Blog data={landingPageData.Blog} /> {/* Add the Blog component */}
+      {/* <Blog data={landingPageData.Blog} /> Add the Blog component */}
     </div>
   );
 };

@@ -1533,7 +1533,6 @@ h4 {
   z-index: 1000; /* Ensure it overlaps other elements */
   transition: transform 0.3s ease; /* Smooth transition for the links */
 }
-
 .social-icon {
   position: fixed; /* Fixed position */
   top: 80%; /* Position from the bottom */
@@ -1544,38 +1543,31 @@ h4 {
   width: 70px; 
   height: 70px; 
   cursor: pointer;
-  
   transition: transform 0.3s; /* Smooth transition for rotation */
 }
-
 .social-icon.active {
   transform: rotate(360deg); /* Rotate 180 degrees when active */
 }
-
 .heartbeat-icon {
   width: 40px; 
   height: 40px; 
 }
-
 .links {
   margin-top: 10px; 
   display: flex;
   flex-direction: column; 
   align-items: center; 
 }
-
 .link-item {
   color: rgb(18, 32, 223); /* Change to the color of your icons */
   font-size: 25px; /* Increase the font size */
   padding: 10px; /* Add padding around the icons */
   transition: transform 0.3s; /* Smooth transition for scaling */
 }
-
 .link-item:hover {
   transform: scale(1.2); /* Scale up the icon size on hover */
   background-color: #775c5c;
 }
-
 /* Additional styling if necessary */
 .links {
   margin-top: 10px; 

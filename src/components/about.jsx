@@ -3,7 +3,6 @@ import React, { useEffect, useRef } from "react";
 export const About = (props) => {
   const aboutTextRef = useRef(null);
   const missionItemRef = useRef(null);
-  const visionItemRef = useRef(null);
   const valueItemRef = useRef(null);
   const imageRef = useRef(null);
 
@@ -24,7 +23,6 @@ export const About = (props) => {
     const elementsToObserve = [
       aboutTextRef,
       missionItemRef,
-      visionItemRef,
       valueItemRef,
       imageRef,
     ];
@@ -49,19 +47,13 @@ export const About = (props) => {
               <h2>About Us</h2>
               <p>{props.data ? props.data.paragraph : "loading..."}</p>
               <div className="row">
-                <div className="col-12 col-sm-4">
+                <div className="col-12 col-sm-6">
                   <div className="about-item animate-from-right animate-delay-1" ref={missionItemRef}>
                     <h3>Mission</h3>
                     <p>{props.data ? props.data.mission : "loading..."}</p>
                   </div>
                 </div>
-                <div className="col-12 col-sm-4">
-                  <div className="about-item animate-from-left animate-delay-2" ref={visionItemRef}>
-                    <h3>Vision</h3>
-                    <p>{props.data ? props.data.vision : "loading..."}</p>
-                  </div>
-                </div>
-                <div className="col-12 col-sm-4">
+                <div className="col-12 col-sm-6">
                   <div className="about-item animate-from-right animate-delay-3" ref={valueItemRef}>
                     <h3>Values</h3>
                     <p>{props.data ? props.data.values : "loading..."}</p>

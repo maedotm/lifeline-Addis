@@ -10,9 +10,19 @@ const CounterSection = styled.section`
   }
 `;
 
-const Title = styled.div`
+const VisionSection = styled.section`
+  padding: 2rem;
+  background-color: #e1e1e1;
   text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+`;
+
+const Title = styled.div`
   margin-bottom: 2rem;
+  text-align: center; /* Centering the title */
 `;
 
 const Heading = styled.h1`
@@ -28,6 +38,7 @@ const CounterRow = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
+  font-size:1.8rem;
 `;
 
 const CounterColumn = styled.div`
@@ -40,11 +51,11 @@ const CounterColumn = styled.div`
 `;
 
 const NumberWrapper = styled.div`
-  font-size: 3rem;
+  font-size: 2rem; /* Adjusted size for numbers */
   font-weight: bold;
 
   @media (max-width: 768px) {
-    font-size: 2rem;
+    font-size: 1.5rem; /* Smaller size for mobile */
   }
 `;
 
@@ -91,39 +102,75 @@ function Counter({ className, text, ...rest }) {
   }, []);
 
   return (
-    <CounterSection className={`counter ${className}`}>
-      <Title>
-        <Heading>What makes us unique</Heading>
-      </Title>
+    <>
+      <VisionSection>
+        <Title>
+          <Heading>Vision</Heading>
+        </Title>
+        <CounterRow>
+          {[
+            { count: 500000, text: "To Serve" },
+            { count: 10000, text: "Create Jobs" },
+          ].map(({ count, text }, index) => (
+            <CounterColumn key={index} className="counter-column">
+              <div className="counter-content">
+                <NumberWrapper>
+                  <strong data-number={count}>
+                    <CountUp
+                      {...rest}
+                      start={viewPortEntered ? null : 0}
+                      end={count}
+                      duration={2.5}
+                      prefix="+"
+                    >
+                      {({ countUpRef }) => (
+                        <span className="number" ref={countUpRef} />
+                      )}
+                    </CountUp>
+                  </strong>
+                </NumberWrapper>
+                <Text>{text}</Text>
+              </div>
+            </CounterColumn>
+          ))}
+        </CounterRow>
+      </VisionSection>
 
-      <CounterRow>
-        {[
-          { count: 500, text: "Health care Professional" },
-          { count: 5, text: "year experience" },
-          { count: 10000, text: "Served families" },
-        ].map(({ count, text }, index) => (
-          <CounterColumn key={index} className="counter-column">
-            <div className="counter-content">
-              <NumberWrapper>
-                <strong data-number={count}>
-                  <CountUp
-                    {...rest}
-                    start={viewPortEntered ? null : 0}
-                    end={count}
-                    prefix="+"
-                  >
-                    {({ countUpRef }) => (
-                      <span className="number" ref={countUpRef} />
-                    )}
-                  </CountUp>
-                </strong>
-              </NumberWrapper>
-              <Text>{text}</Text>
-            </div>
-          </CounterColumn>
-        ))}
-      </CounterRow>
-    </CounterSection>
+      <CounterSection className={`counter ${className}`}>
+        <Title>
+          <Heading>What makes us unique</Heading>
+        </Title>
+
+        <CounterRow>
+          {[
+            { count: 500, text: "Health care Professionals" },
+            { count: 5, text: "Years Experience" },
+            { count: 10000, text: "Served Families" },
+          ].map(({ count, text }, index) => (
+            <CounterColumn key={index} className="counter-column">
+              <div className="counter-content">
+                <NumberWrapper>
+                  <strong data-number={count}>
+                    <CountUp
+                      {...rest}
+                      start={viewPortEntered ? null : 0}
+                      end={count}
+                      duration={2.5}
+                      prefix="+"
+                    >
+                      {({ countUpRef }) => (
+                        <span className="number" ref={countUpRef} />
+                      )}
+                    </CountUp>
+                  </strong>
+                </NumberWrapper>
+                <Text>{text}</Text>
+              </div>
+            </CounterColumn>
+          ))}
+        </CounterRow>
+      </CounterSection>
+    </>
   );
 }
 

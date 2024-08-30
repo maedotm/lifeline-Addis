@@ -1574,7 +1574,7 @@ h4 {
 
 .link-item:hover {
   transform: scale(1.2); /* Scale up the icon size on hover */
-  background-color: #000;
+  background-color: #775c5c;
 }
 
 /* Additional styling if necessary */

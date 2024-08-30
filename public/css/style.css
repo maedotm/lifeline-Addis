@@ -5,7 +5,6 @@ body {
 }
 
 
-
 html {
   font-family: "Open Sans", sans-serif;
   text-rendering: optimizeLegibility !important;
@@ -223,6 +222,17 @@ a:focus,
 .btn.active.focus {
   outline: none;
   outline-offset: none;
+}
+.navbar {
+  transition: top 0.3s;
+}
+
+.hidden {
+  top: -80px; /* Adjust based on the height of your navbar */
+}
+
+.visible {
+  top: 0;
 }
 /* Header Section */
 /* .intro {

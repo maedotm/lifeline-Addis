@@ -57,9 +57,9 @@ export const Contact = (props) => {
       <a href={props.data ? props.data.tiktok : "/"} target="_blank" rel="noopener noreferrer">
         <i className="fab fa-tiktok"></i>
       </a>
-      <a href={`tel:${props.data ? props.data.phone : ""}`} onClick={handlePhoneClick}>
-        <i className="fa fa-phone"></i>
-      </a>
+      <a href={`tel:${props.data ? props.data.phone : ""}`}>
+  <i className="fa fa-phone"></i>
+</a>
     </div>
             </div>
           </div>

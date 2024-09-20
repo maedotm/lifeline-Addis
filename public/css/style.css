@@ -823,7 +823,11 @@ button.next {
   .service-item {
     height: 150px; /* Reduce height for mobile */
   }
-
+  #services .container .row {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(2,1fr); /* Two columns */
+    gap: 15px; /* Space between items */
+  }
   #services i.rounded-icon {
     font-size: 24px; /* Icon size */
     width: 60px; /* Icon width */

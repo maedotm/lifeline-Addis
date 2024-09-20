@@ -500,6 +500,14 @@ button.next {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .header-container {
+    height: 60vh; /* Decrease height for mobile */
+  }
+
+  .slide {
+    min-height: 40vh; /* Minimum height for better visibility on mobile */
+  }
+
   .slide-content h2 {
     font-size: 2rem; /* Smaller font size on mobile */
   }
@@ -512,13 +520,7 @@ button.next {
     font-size: 1rem; /* Adjust button size */
   }
 }
-@media (max-width: 768px) {
-  .slide {
-    width: 100vw; /* Full viewport width */
-    height: auto; /* Allow height to adjust for content */
-    min-height: 60vh; /* Minimum height for better visibility */
-  }
-}
+
 
 /* About Section */
 #about {

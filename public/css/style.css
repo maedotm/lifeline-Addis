@@ -769,7 +769,77 @@ button.next {
   color: #333;
   font-size: 24px;
 }
+.services-section {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  background-color: #f2f2f2; 
+}
 
+.section-title {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.service-item {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Default height */
+  margin-bottom: 1rem; /* Add margin for spacing */
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  cursor: pointer; /* Indicate something is interactable */
+}
+
+.service-item:hover {
+  transform: rotateY(180deg); /* Flip on hover for desktop */
+}
+
+.service-item.flipped {
+  transform: rotateY(180deg); /* Flip state for mobile */
+}
+
+.service-item-front,
+.service-item-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+}
+
+.service-item-front {
+  z-index: 2;
+  font-size: 3rem; /* Adjust this for different views */
+}
+
+.service-item-back {
+  transform: rotateY(180deg);
+  z-index: 1; /* Ensure it’s behind the front */
+}
+@media (max-width: 768px) {
+  .service-item {
+    height: 150px; /* Reduce height for mobile */
+  }
+
+  #services i.rounded-icon {
+    font-size: 24px; /* Icon size */
+    width: 60px; /* Icon width */
+    height: 60px; /* Icon height */
+    padding: 15px; /* Padding around the icon */
+    
+    border-radius: 50%; /* Circular icon */
+    color: #fff; /* Icon color */
+    margin-bottom: 10px; /* Space below the icon */
+  }
+  .service-item-front,
+  .service-item-back {
+    font-size: 1.5rem; /* Decrease font size */
+  }
+
+}
 /* partner */
 .company-logos {
   padding: 3rem 1rem;
@@ -1303,20 +1373,40 @@ button.next {
   font-size: 1rem; /* Adjust font size */
 }
 
+/* Media query for mobile devices */
 @media (max-width: 768px) {
+
+  /* Reduce the width of the columns */
+  .col-md-4,
+  .col-md-8,
+  .col-md-offset-2 {
+    width: 100%;
+  }
+
+  /* Reduce the font size of headings and paragraphs */
+  h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+
+  /* Reduce the size of the team member images */
+  .team-img {
+    width: 75%;
+    height: auto;
+  }
+
+  /* Adjust the button size and padding */
+  .read-more-btn {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+
+  /* Reduce the size of the modal content */
   .team-modal-content {
-    max-width: 90%; /* Full width for mobile */
-    padding: 1rem; /* Adjust padding */
-  }
-}
-
-@media (max-width: 480px) {
-  .close-btn {
-    font-size: 1.25rem; /* Smaller close button on mobile */
-  }
-
-  .team-modal-body {
-    font-size: 0.9rem; /* Smaller text for better readability */
+    width: 90%;
+    max-width: 400px;
   }
 }
 /* Contact Section */
@@ -1449,66 +1539,7 @@ h4 {
     margin: 50px 0;
   }
 }
-.services-section {
-  padding-top: 2rem;
-  padding-bottom: 4rem;
-  background-color: #f2f2f2; 
-}
 
-.section-title {
-  margin-bottom: 2rem;
-  margin-top: 1rem;
-}
-
-.service-item {
-  position: relative;
-  width: 100%;
-  height: 300px; /* Default height */
-  margin-bottom: 1rem; /* Add margin for spacing */
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  cursor: pointer; /* Indicate something is interactable */
-}
-
-.service-item:hover {
-  transform: rotateY(180deg); /* Flip on hover for desktop */
-}
-
-.service-item.flipped {
-  transform: rotateY(180deg); /* Flip state for mobile */
-}
-
-.service-item-front,
-.service-item-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  align-items: center;
-}
-
-.service-item-front {
-  z-index: 2;
-  font-size: 3rem; /* Adjust this for different views */
-}
-
-.service-item-back {
-  transform: rotateY(180deg);
-  z-index: 1; /* Ensure it’s behind the front */
-}
-@media (max-width: 768px) {
-  .service-item {
-    height: 200px; /* Reduce height for mobile */
-  }
-
-  .service-item-front,
-  .service-item-back {
-    font-size: 1.5rem; /* Decrease font size */
-  }
-}
 /* BLOG */
 .card {
   border: 1px solid #ccc;

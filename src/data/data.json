@@ -125,7 +125,7 @@
       "link": "#partners"
     },
     {
-      "image": "img/partner/mastercardfoundation .jpg",
+      "image": "img/partner/girum.jpg",
       "link": "#partners"
     },
     {
@@ -196,14 +196,16 @@
 ],
 "Blog": [
   {
-      "image": "img/partner/donkytube.jpeg",
-      "title": "Blog Title 1",
-      "description": "Description for blog 1"
+    "title": "First Blog Post",
+    "img": "url-to-image.jpg",
+    "summary": "This is a summary of the first blog post.",
+    "content": "This is the full content of the first blog post."
   },
   {
-      "image": "path/to/image2.jpg",
-      "title": "Blog Title 2",
-      "description": "Description for blog 2"
+    "title": "Second Blog Post",
+    "img": "url-to-image2.jpg",
+    "summary": "Summary of the second blog post.",
+    "content": "This is the full content of the second blog post."
   }
 ],
   "Contact": {

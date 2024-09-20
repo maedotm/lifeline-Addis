@@ -118,32 +118,43 @@ function Counter({ className, ...rest }) {
           <Heading>Vision</Heading>
         </Title>
         <CounterRow>
-          {[
-            { count: 500000, text: "To Serve" },
-            { count: 10000, text: "To Create Jobs" },
-          ].map(({ text, count }, index) => (
-            <CounterColumn key={index} className="counter-column">
-              <VisionContent>
-                <Text>{text}</Text>
-                <NumberWrapper>
-                  <strong data-number={count}>
-                    <CountUp
-                      {...rest}
-                      start={viewPortEntered ? 0 : 0}
-                      end={viewPortEntered ? count : 0}
-                      duration={3}
-                      prefix="+"
-                    >
-                      {({ countUpRef }) => (
-                        <span className="number" ref={countUpRef} />
-                      )}
-                    </CountUp>
-                  </strong>
-                </NumberWrapper>
-              </VisionContent>
-            </CounterColumn>
-          ))}
-        </CounterRow>
+  {[
+    {
+      count: 500000,
+      textBefore: "To serve",
+      textAfter: "households",
+    },
+    {
+      count: 10000,
+      textBefore: "To create",
+      textAfter: "jobs",
+    },
+  ].map(({ count, textBefore, textAfter }, index) => (
+    <CounterColumn key={index} className="counter-column">
+      <VisionContent>
+        <Text style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          {textBefore}{" "}
+          <NumberWrapper style={{ display: 'inline' }}>
+            <strong data-number={count}>
+              <CountUp
+                {...rest}
+                start={viewPortEntered ? 0 : 0}
+                end={viewPortEntered ? count : 0}
+                duration={3}
+                
+              >
+                {({ countUpRef }) => (
+                  <span className="number" ref={countUpRef} />
+                )}
+              </CountUp>
+            </strong>
+          </NumberWrapper>{" "}
+          {textAfter}
+        </Text>
+      </VisionContent>
+    </CounterColumn>
+  ))}
+</CounterRow>
       </VisionSection>
 
       <CounterSection className={`counter ${className}`}>

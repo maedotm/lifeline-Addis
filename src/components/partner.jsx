@@ -22,7 +22,7 @@ const CompanyLogos = () => {
       link: '#partner',
     },
     {
-      image: 'img/partner/mastercardfoundation .jpg',
+      image: 'img/partner/girum.jpg',
       link: '#partner',
     },
     {

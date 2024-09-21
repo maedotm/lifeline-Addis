@@ -47,7 +47,7 @@ export const Testimonials = (props) => {
             <div className="testimonial-content">
               <p onClick={() => isLongText && toggleExpand(i)} style={{ cursor: isLongText ? 'pointer' : 'default' }}>
                 {displayedText}
-                {isLongText && <span style={{ color: '#6c1c1c', fontWeight: 'bold' }}>{toggleText}</span>}
+                {isLongText && <span className="toggle-text">{toggleText}</span>}
               </p>
               <div className="testimonial-meta">- {d.name}</div>
             </div>

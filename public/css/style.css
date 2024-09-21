@@ -1098,19 +1098,10 @@ button.next {
   font-weight: 600;
   color: #666;
 }
-.see-more-btn {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  background-color: #807373;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.see-more-btn:hover {
-  background-color: #5f6164;
+.toggle-text {
+  color: #6c1c1c; /* Change to your desired color */
+  font-weight: bold;
+  cursor: pointer; /* Ensure it looks clickable */
 }
 /* Team Section */
 #team {

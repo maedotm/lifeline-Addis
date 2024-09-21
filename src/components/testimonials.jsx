@@ -3,7 +3,7 @@ import "animate.css";
 
 export const Testimonials = (props) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [showMore, setShowMore] = useState(false);
+  const [expandedIndex, setExpandedIndex] = useState(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -12,9 +12,7 @@ export const Testimonials = (props) => {
           setIsVisible(entry.isIntersecting);
         });
       },
-      {
-        rootMargin: "0px 0px 50px 0px",
-      }
+      { rootMargin: "0px 0px 50px 0px" }
     );
 
     const testimonialsSection = document.getElementById("testimonials");
@@ -25,8 +23,38 @@ export const Testimonials = (props) => {
     };
   }, []);
 
-  const toggleShowMore = () => {
-    setShowMore(!showMore);
+  const toggleExpand = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
+  const renderTestimonials = () => {
+    if (!props.data || props.data.length === 0) {
+      return <p>Loading...</p>;
+    }
+
+    return props.data.map((d, i) => {
+      const isExpanded = expandedIndex === i;
+      const isLongText = d.text.length > 300;
+      const displayedText = isExpanded || !isLongText ? d.text : `${d.text.slice(0, 300)}... `;
+      const toggleText = isExpanded ? "See Less" : "See More";
+
+      return (
+        <div key={`${d.name}-${i}`} className="col-md-6">
+          <div className="testimonial">
+            <div className="testimonial-image">
+              <img src={d.img} alt={d.name} />
+            </div>
+            <div className="testimonial-content">
+              <p onClick={() => isLongText && toggleExpand(i)} style={{ cursor: isLongText ? 'pointer' : 'default' }}>
+                {displayedText}
+                {isLongText && <span style={{ color: '#6c1c1c', fontWeight: 'bold' }}>{toggleText}</span>}
+              </p>
+              <div className="testimonial-meta">- {d.name}</div>
+            </div>
+          </div>
+        </div>
+      );
+    });
   };
 
   return (
@@ -37,29 +65,8 @@ export const Testimonials = (props) => {
         </div>
         <div className={`section-content ${isVisible ? "animate__animated animate__slideInUp" : ""}`}>
           <div className="row">
-            {props.data && props.data.length > 0 ? (
-              props.data.slice(0, showMore ? props.data.length : 2).map((d, i) => (
-                <div key={`${d.name}-${i}`} className="col-md-6">
-                  <div className="testimonial">
-                    <div className="testimonial-image">
-                      <img src={d.img} alt={d.name} />
-                    </div>
-                    <div className="testimonial-content">
-                      <p>"{d.text}"</p>
-                      <div className="testimonial-meta">- {d.name}</div>
-                    </div>
-                  </div>
-                </div>
-              ))
-            ) : (
-              <p>Loading...</p>
-            )}
+            {renderTestimonials()}
           </div>
-          {props.data && props.data.length > 2 && (
-            <button onClick={toggleShowMore} className="see-more-btn">
-              {showMore ? "See Less" : "See More"}
-            </button>
-          )}
         </div>
       </div>
     </div>

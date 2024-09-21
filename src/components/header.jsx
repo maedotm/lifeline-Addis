@@ -10,19 +10,19 @@ export const Header = (props) => {
     {
       heading: props.data ? props.data.title : "First Heading",
       content: props.data ? props.data.paragraph : "Loading",
-      image: "./img/sslide_1-min.jpg",
+      image: "./img/slide_1d.jpg",
       position: { top: "70%", left: "50%" },
     },
     {
       heading: "Your Home Healthcare Partner",
       content: "Your health, our priority. Expert care, home comfort.",
-      image: "./img/sslide_2-min.jpg",
+      image: "./img/slide_2d.jpg",
       position: { top: "60%", left: "50%" },
     },
     {
       heading: "Bringing Healthcare Home",
       content: "Bridging the healthcare gap. Healing begins at home.",
-      image: "./img/sslide_3-min.jpg",
+      image: "./img/slide_3d.jpg",
       position: { top: "50%", left: "35%" },
     },
   ];

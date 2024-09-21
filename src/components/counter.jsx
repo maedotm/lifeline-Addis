@@ -141,6 +141,7 @@ function Counter({ className, ...rest }) {
                 start={viewPortEntered ? 0 : 0}
                 end={viewPortEntered ? count : 0}
                 duration={3}
+              suffix="+"
                 
               >
                 {({ countUpRef }) => (

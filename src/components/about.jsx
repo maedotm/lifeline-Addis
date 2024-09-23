@@ -1,10 +1,11 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 export const About = (props) => {
   const aboutTextRef = useRef(null);
   const missionItemRef = useRef(null);
   const valueItemRef = useRef(null);
   const imageRef = useRef(null);
+  const [animateParagraph, setAnimateParagraph] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -33,6 +34,11 @@ export const About = (props) => {
       }
     });
 
+    // Check if the screen width is less than or equal to 768px (mobile view)
+    if (window.innerWidth <= 768) {
+      setAnimateParagraph(true);
+    }
+
     return () => {
       observer.disconnect();
     };
@@ -43,7 +49,10 @@ export const About = (props) => {
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-6">
-            <div className="about-text animate-from-bottom" ref={aboutTextRef}>
+            <div 
+              className={`about-text ${animateParagraph ? 'animate' : ''} animate-from-bottom`} 
+              ref={aboutTextRef}
+            >
               <h2>About Us</h2>
               <p>{props.data ? props.data.paragraph : "loading..."}</p>
               <div className="row">
@@ -63,11 +72,10 @@ export const About = (props) => {
             </div>
           </div>
           <div className="col-12 col-md-6">
-              <img src="img/08-smalld.jpg" className="card-img-top" alt="" style={{ width: '100%', height: 'auto' }} />
-              <div className="card-body">
-                {/* Optional content can go here */}
-              </div>
-            
+            <img src="img/08-smalld.jpg" className="card-img-top" alt="" style={{ width: '100%', height: 'auto' }} />
+            <div className="card-body">
+              {/* Optional content can go here */}
+            </div>
           </div>
         </div>
       </div>

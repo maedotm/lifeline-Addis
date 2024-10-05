@@ -28,7 +28,6 @@ export const Header = (props) => {
   ];
 
   useEffect(() => {
-    // Preload the images
     const preloadImages = async () => {
       await Promise.all(slides.map(async (slide) => {
         const img = new Image();
@@ -40,17 +39,13 @@ export const Header = (props) => {
     preloadImages();
 
     const timer = setInterval(() => {
-      setIsAnimating(true);
-      setTimeout(() => {
-        setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-        setIsAnimating(false);
-      }, 1000); // Delay for fading effect
+      handleNextClick();
     }, 3000);
 
     return () => {
       clearInterval(timer);
     };
-  }, [slides.length]);
+  }, []);
 
   const handlePrevClick = () => {
     setIsAnimating(true);
@@ -74,11 +69,11 @@ export const Header = (props) => {
       {isImageLoaded && slides.map((slide, index) => (
         <div
           key={index}
-          className={`slide ${currentSlide === index ? "active" : ""}`}
+          className={`slide ${currentSlide === index ? "active" : ""} ${isAnimating ? "animating" : ""}`}
           style={{ display: currentSlide === index ? "block" : "none" }}
         >
           <div
-            className={`slide-content ${isAnimating ? "fade" : ""}`}
+            className="slide-content"
             style={{ top: slide.position.top, left: slide.position.left }}
           >
             <h2>{slide.heading}</h2>
@@ -93,7 +88,7 @@ export const Header = (props) => {
         <FaChevronRight />
       </button>
       <a href="#about" className="btn btn-custom">
-        learn aboutus
+        Learn About Us
       </a>
     </header>
   );

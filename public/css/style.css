@@ -331,7 +331,46 @@ header .intro-text {
   font-size: 16px;
   cursor: pointer;
 }
+.slide.animating {
+  transition: transform 1s ease-in-out;
+}
+.slide.animating.active {
+  transform: translateX(0);
+}
 
+.slide:not(.active) {
+  transform: translateX(100%); /* Slide out to the right */
+}
+
+.slide.active.animating {
+  transform: translateX(-100%); /* Slide current out to the left */
+}
+.slide-content.active {
+  opacity: 1;
+  transform: translateX(0); /* Slide in from the left */
+}
+
+.slide-content.animating {
+  opacity: 0; /* Fade out during transition */
+  transform: translateX(-100%); /* Slide out to the left */
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10; /* Ensure buttons are above other elements */
+}
+.header-bg.animating {
+  transform: translateX(100%); /* Slide out to the right */
+}
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
 .prev-btn:hover,
 .next-btn:hover {
   background-color: rgba(255, 255, 255, 0.7);
@@ -380,7 +419,8 @@ header .intro-text {
   transform: translateX(-50%);
   color: white;
   text-align: center;
-
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  transform: translateX(-100%); /* Start off-screen to the left */
 }
 
 .slide-content h2 {
@@ -425,8 +465,7 @@ button.next {
   height: 100%;
   background-size: cover;
   background-position: center;
-  z-index: -1;
-  animation: bgSlide 3s ease-in-out infinite;
+  transition: transform 1s ease-in-out;
 }
 
 @keyframes bgSlide {
@@ -482,6 +521,7 @@ button.next {
   color: #000;
   text-align: center;
   transition: opacity 0.5s ease; /* Fade effect for text */
+  transition: opacity 1s ease-in-out;
 }
 
 .slide-content.fade {
@@ -1399,7 +1439,7 @@ button.next {
     font-size: 1.5rem;
   }
   p {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   /* Reduce the size of the team member images */
